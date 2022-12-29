@@ -1,8 +1,14 @@
-import React from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
-import { BsFillPersonLinesFill } from "react-icons/bs";
-import resume from "../assets/resume.pdf"
+import React from 'react';
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTelegram,
+  FaDiscord,
+  FaSkype,
+} from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
+import { BsFillPersonLinesFill } from 'react-icons/bs';
+import resume from '../assets/resume.pdf';
 const SocialLinks = () => {
   const links = [
     {
@@ -12,8 +18,8 @@ const SocialLinks = () => {
           LinkedIn <FaLinkedin size={30} />
         </>
       ),
-      href: "https://linkedin.com/in/rahulkarda2002",
-      style: "rounded-tr-md",
+      href: 'https://linkedin.com/in/amos-kohen',
+      style: 'rounded-tr-md',
     },
     {
       id: 2,
@@ -22,7 +28,7 @@ const SocialLinks = () => {
           GitHub <FaGithub size={30} />
         </>
       ),
-      href: "https://github.com/rahulkarda",
+      href: 'https://github.com/stickaround',
     },
     {
       id: 3,
@@ -31,10 +37,37 @@ const SocialLinks = () => {
           Email <HiOutlineMail size={30} />
         </>
       ),
-      href: "mailto:rahulkarda2002@gmail.com",
+      href: 'mailto:amoskohen19@gmail.com',
     },
     {
       id: 4,
+      child: (
+        <>
+          Skype <FaSkype size={30} />
+        </>
+      ),
+      href: 'live:.cid.d9d5b760c571f168',
+    },
+    {
+      id: 5,
+      child: (
+        <>
+          Telegram <FaTelegram size={30} />
+        </>
+      ),
+      href: 'https://t.me/stickaroundhere',
+    },
+    {
+      id: 6,
+      child: (
+        <>
+          Discord <FaDiscord size={30} />
+        </>
+      ),
+      href: 'https://discordapp.com/users/stickaround#9139',
+    },
+    {
+      id: 7,
       child: (
         <>
           Resume <BsFillPersonLinesFill size={30} />
@@ -42,37 +75,28 @@ const SocialLinks = () => {
       ),
       href: resume,
       download: true,
-    },
-    {
-      id: 5,
-      child: (
-        <>
-          Twitter <FaTwitter size={30} />
-        </>
-      ),
-      href: "https://twitter.com/rahulkarda2002",
-      style: "rounded-br-md",
+      style: 'rounded-br-md',
     },
   ];
 
   return (
-    <div className="hidden lg:flex flex-col top-[35%] left-0 fixed">
+    <div className='hidden lg:flex flex-col top-[35%] left-0 fixed'>
       <ul>
         {links.map(({ id, child, href, style, download }) => (
           <li
             key={id}
             className={
-              "flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500" +
-              " " +
+              'flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500' +
+              ' ' +
               style
             }
           >
             <a
               href={href}
-              className="flex justify-between items-center w-full text-white"
+              className='flex justify-between items-center w-full text-white'
               download={download}
-              target="_blank"
-              rel="noreferrer"
+              target='_blank'
+              rel='noreferrer'
             >
               {child}
             </a>
